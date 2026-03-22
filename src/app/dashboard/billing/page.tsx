@@ -72,7 +72,7 @@ export default async function BillingDashboardPage() {
                 <tr>
                   <td colSpan={5} className="p-8 text-center text-slate-500">No payment history found.</td>
                 </tr>
-              ) : payments.map(payment => (
+              ) : payments.map((payment: any) => (
                 <tr key={payment.id} className="hover:bg-white/5 transition-colors">
                   <td className="p-4">{payment.createdAt.toLocaleDateString()}</td>
                   <td className="p-4">₹{(payment.amount / 100).toFixed(2)}</td>
