@@ -23,7 +23,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: { 
     select: { id: true, updatedAt: true, messages: { orderBy: { createdAt: 'asc' } } }
   });
 
-  const currentChat = searchParams?.chatId ? chats.find(c => c.id === searchParams.chatId) : null;
+  const currentChat = searchParams?.chatId ? chats.find((c: any) => c.id === searchParams.chatId) : null;
   const initialMessages = currentChat?.messages || [];
 
   return (
